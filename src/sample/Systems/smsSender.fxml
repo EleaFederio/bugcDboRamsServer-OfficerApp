@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.SmsSender">
+   <children>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #1d2c4c;">
+         <children>
+            <Label text="SELECT ATTENDACE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children></VBox>
+      <VBox prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #81858c;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox prefHeight="730.0" prefWidth="100.0" style="-fx-background-color: #888888;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="690.0" prefWidth="100.0" style="-fx-background-color: #32506d;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="textCounter" onKeyTyped="#letterCounter" text="0" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="90.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="messageBox" onKeyTyped="#letterCounter" prefHeight="200.0" prefWidth="200.0" promptText="Type you message here..." wrapText="true">
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="560.0" style="-fx-background-color: #8b9dc3;">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Send to:">
+                                 <VBox.margin>
+                                    <Insets left="50.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#sendThistoAllOrgMembers" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="All Members" />
+                                    <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="33.0" mnemonicParsing="false" onAction="#sendThisToOfficers" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="All Officers" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets left="80.0" right="80.0" top="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#sendThisToAll" style="-fx-background-color: #FFFFFF;" text="SANCTION CHECKER" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

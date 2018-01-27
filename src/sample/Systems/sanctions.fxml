@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.Sanctions">
+   <children>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #1d2c4c;">
+         <children>
+            <Label text="CREATE SANCTION" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #81858c;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox prefHeight="730.0" prefWidth="100.0" style="-fx-background-color: #888888;">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="690.0" prefWidth="100.0" style="-fx-background-color: #32506d;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="eventSanction" maxWidth="600.0" onMouseClicked="#eventSanctionSelected" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="eventField" prefWidth="331.0" text="Event" />
+                      <TableColumn fx:id="eventSanctionField" prefWidth="263.0" text="Sanction" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="eventSanctionNameField" focusColor="#a1cd2b" prefWidth="300.0" unFocusColor="#abab1d">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#setEventSanction" style="-fx-background-color: #ffffff;" text="Set Sanction">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#resetEventSanction" style="-fx-background-color: #ffffff;" text="Reset">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="feesTable" maxWidth="600.0" onMouseClicked="#feesSanctionSelected" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="feesField" prefWidth="331.0" text="Fees" />
+                      <TableColumn fx:id="feesSanctionField" prefWidth="265.0" text="Sanction" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="260.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="feesSanctionNameField" focusColor="#a1cd2b" prefWidth="300.0" unFocusColor="#abab1d">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#setFeesSanction" style="-fx-background-color: #ffffff;" text="Set Sanction">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#resetFeedSanction" style="-fx-background-color: #ffffff;" text="Reset">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

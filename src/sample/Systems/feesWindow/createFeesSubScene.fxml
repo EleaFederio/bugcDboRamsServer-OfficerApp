@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="800.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.feesWindow.CreateFeesSubScene">
+   <children>
+      <VBox alignment="CENTER" prefHeight="640.0" prefWidth="760.0" style="-fx-background-color: #32506d;">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <children>
+            <TableView fx:id="feesTable" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="feesNameColumn" prefWidth="372.0" text="Conrtibution" />
+                <TableColumn fx:id="feesAmountColumn" prefWidth="82.0" text="Amount" />
+                  <TableColumn fx:id="feesDealineColumn" prefWidth="102.0" text="Deadline" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </TableView>
+            <JFXTextField fx:id="contributionNameField" alignment="CENTER" focusColor="#d3ab55" labelFloat="true" promptText="Contribution Name" style="-fx-text-fill: #ffffffff; -fx-prompt-text-fill: #bf972a;" unFocusColor="#d8e138">
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="contributionAmountField" alignment="CENTER" focusColor="#d3ab55" labelFloat="true" maxWidth="100.0" prefWidth="100.0" promptText="Amount" style="-fx-prompt-text-fill: #bf972a; -fx-text-fill: #ffffff;" unFocusColor="#d8e138">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+               <children>
+                  <JFXDatePicker fx:id="deadline" prefWidth="100.0" promptText=" Deadline" style="-fx-background-color: #ffffff;" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="30.0">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#edit" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Remove">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#sendFeesGroupMessage" style="-fx-background-color: #ffffff;" text="DISSEMINATE INFORMATION">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children></VBox>
+   </children>
+</VBox>
